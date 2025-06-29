@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lee & Empire Hub</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=23265&format=png&color=000000" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.pexels.com/photos/32755747/pexels-photo-32755747.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #fff;
+    }
+    .brands {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .brand-card {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      position: relative;
+      cursor: pointer;
+    }
+    .brand-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    .brand-card h2 {
+      margin-bottom: 0.5rem;
+    }
+    .brand-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .brand-card a:hover {
+      background: #ddd;
+    }
+    .brand-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 20px;
+      z-index: 1000;
+    }
+    .chat-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+      z-index: 1000;
+    }
+    .chat-box {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      max-height: 400px;
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      display: none;
+      z-index: 1000;
+    }
+    .chat-box.open {
+      display: block;
+    }
+    .about, .thanks, .action-links {
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.8);
+      margin: 2rem;
+      border-radius: 15px;
+    }
+    .action-links a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LEE & EMPIRE BRAND PORTAL</h1>
+    <p>One Hub. Four Kingdoms. Infinite Game.</p>
+  </header>
+
+  <section class="brands">
+    <div class="brand-card" onclick="window.open('https://tycoon-x32.github.io/lee-and-co/', '_blank')">
+      <img src="https://images.pexels.com/photos/13873889/pexels-photo-13873889.jpeg" alt="Lee Designer Watches" />
+      <h2>Lee Designer Watches</h2>
+      <p>Timeless luxury. Explore high-end timepieces with edge.</p>
+      <a href="#">Visit</a>
+    </div>
+    <div class="brand-card" onclick="window.open('https://tycoon-x32.github.io/airlee.ke/', '_blank')">
+      <img src="https://img.freepik.com/premium-photo/black-rolls-royce-parked-front-private-jet_36682-369351.jpg" alt="AirLee" />
+      <h2>AirLee</h2>
+      <p>Luxury meets air. Charter and commercial flights for the elite.</p>
+      <a href="#">Fly Now</a>
+    </div>
+    <div class="brand-card" onclick="window.open('https://tycoon-x32.github.io/LeeWear/', '_blank')">
+      <img src="https://images.pexels.com/photos/2474307/pexels-photo-2474307.jpeg" alt="Leewear" />
+      <h2>Leewear</h2>
+      <p>Old money fashion. Step into timeless tailored suits.</p>
+      <a href="#">Shop Now</a>
+    </div>
+    <div class="brand-card" onclick="window.open('https://tycoon-x32.github.io/luxeloop/', '_blank')">
+      <img src="https://static.vecteezy.com/system/resources/previews/017/424/405/large_2x/letter-l-logo-luxurious-sign-with-golden-luxury-color-and-monogram-symbol-vector.jpg" alt="LuxeLoop" />
+      <h2>LuxeLoop</h2>
+      <p>Premium digital drops. Templates, prompts, and tools for creators.</p>
+      <a href="#">Unlock</a>
+    </div>
+  </section>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lee & Empire Hub</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=23265&format=png&color=000000" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.pexels.com/photos/32755747/pexels-photo-32755747.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #fff;
+    }
+    .brands {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .brand-card {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      position: relative;
+      cursor: pointer;
+    }
+    .brand-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    .brand-card h2 {
+      margin-bottom: 0.5rem;
+    }
+    .brand-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .brand-card a:hover {
+      background: #ddd;
+    }
+    .brand-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 20px;
+      z-index: 1000;
+    }
+    .chat-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+      z-index: 1000;
+    }
+    .chat-box {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      max-height: 400px;
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      display: none;
+      z-index: 1000;
+    }
+    .chat-box.open {
+      display: block;
+    }
+    .about, .thanks, .action-links {
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.8);
+      margin: 2rem;
+      border-radius: 15px;
+    }
+    .action-links a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header and brands section here (unchanged) -->
+
+  <!-- Socials and Action Links -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/tycoon_x32" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/tycoon_x32" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="http://www.youtube.com/@leemessi63" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/yourtwitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="mailto:leemessi63@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="action-links">
+      <a href="shares.html" target="_blank">📈 BUY SHARES</a>
+      <a href="support.html" target="_blank">🤝 SUPPORT THE VISION</a>
+      <a href="workwithme.html" target="_blank">🧠 WORK WITH ME</a>
+    </div>
+  </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lee & Empire Hub</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=23265&format=png&color=000000" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.pexels.com/photos/32755747/pexels-photo-32755747.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #fff;
+    }
+    .nav-float {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 1rem;
+      z-index: 1000;
+    }
+    .nav-float a {
+      padding: 0.5rem 1rem;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+    }
+    .nav-float a:hover {
+      background: #fff;
+      color: #000;
+    }
+    .brands {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .brand-card {
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      position: relative;
+      cursor: pointer;
+    }
+    .brand-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    .brand-card h2 {
+      margin-bottom: 0.5rem;
+    }
+    .brand-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .brand-card a:hover {
+      background: #ddd;
+    }
+    .brand-card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 20px;
+      z-index: 1000;
+    }
+    .chat-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+      z-index: 1000;
+    }
+    .chat-box {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 300px;
+      max-height: 400px;
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      display: none;
+      z-index: 1000;
+    }
+    .chat-box.open {
+      display: block;
+    }
+    .about, .thanks, .action-links {
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.8);
+      margin: 2rem;
+      border-radius: 15px;
+    }
+    .action-links a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-float">
+    <a href="#about">About</a>
+    <a href="#thankyou">Appreciation</a>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About – The Genesis Loop</h2>
+    <p>From nights of coding with zero sleep and zero cash to signing my first PayPal notification at 3AM — this wasn’t luck. It was built. From pain. From persistence. From purpose.</p>
+    <p>Lee & Empire didn’t start with funding or a flashy launch. It started with rejection, doubt, and moments I thought I’d quit. I created Lee Designer Watches from a simple idea — that time is the ultimate currency. Then came AirLee, born from a dream of touching skies most people are afraid to even look at. Leewear wasn’t just about fashion — it was a statement: old money mindset, new money moves. LuxeLoop emerged from the chaos — making tools and digital power accessible to the bold.</p>
+    <p>Every product you see was forged in trial, every design crafted with sweat, setbacks, and soul. I didn’t wait for a room. I built one. This is your proof — dreams don’t die if you don’t quit.</p>
+  </section>
+
+  <!-- Thank You Section (already saved in canvas, now included) -->
+  <section id="thankyou" class="thanks">
+    <h2>Thank You</h2>
+    <p>I want to take a moment to extend my deepest gratitude to those who’ve stood by me through every storm, struggle, and breakthrough. Every chapter of this empire was written with your fingerprints on it, and I carry your influence with pride in every brand I build and every move I make.</p>
+    <p>To my family – <strong>MY FOUNDATION</strong>. Your unshakable support, prayers, and daily belief in my crazy ideas gave me the courage to go from ground zero to building digital kingdoms. You never doubted me even when the results were invisible, and that alone fueled me through the grind.</p>
+    <p><strong>LESLIE SCOTT</strong> – you’re one of one. Your loyalty and quiet belief in my vision lit flames when everything around me felt like it was collapsing. You reminded me of the dream when I forgot why I started. You held space for my ambition and stood strong even when the pressure was insane. You're not just in the circle — you are the blueprint.</p>
+    <p><strong>ERICK DENZEL OKOTH OYUGI</strong> – your energy, your hustle, your fire... unmatched. You’ve been a general in this game beside me, never behind. From the late-night brainstorms to last-minute executions, you showed up every time and made things move. This empire wouldn’t pulse without your bloodline of drive and authenticity.</p>
+    <p><strong>SIR HON TREVOR CECIL</strong> – wisdom. Guidance. Vision. You’re the compass that kept me from veering off when things got chaotic. You taught me to strategize like a CEO and lead with honor. Your mentorship helped shape the long-term perspective of this brand, and I’m forever grateful for your gems.</p>
+    <p><strong>WILL SMITH</strong> – you’re a global giant who turned pain into art and setbacks into success. Watching your journey gave me permission to own my scars and use them as stepping stones. Your evolution reminded me that greatness has to be earned daily, and every hit you took fueled me to rise stronger.</p>
+    <p>This isn’t just a business — it’s a movement. It’s an <strong>EMPIRE</strong>. And empires are built with loyal hearts, not just skilled hands. Thank you for being part of mine. Whether your name is above or in the shadows, your presence is etched in every brand we’ve touched and every victory we’ve secured. This is not just mine — it’s ours. We built this together.</p>
+  </section>
+
+  <!-- Chat + WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/254708623801" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <button class="chat-toggle" onclick="toggleChat()"><i class="fas fa-comments"></i></button>
+  <div class="chat-box" id="chatBox">
+    <p><strong>Yo! Let’s Chat 💬</strong></p>
+    <p>This is your empire hub assistant. Ask anything or click a brand to explore.</p>
+  </div>
+  <script>
+    function toggleChat() {
+      const chat = document.getElementById('chatBox');
+      chat.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

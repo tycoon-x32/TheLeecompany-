@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work With Me – Lee & Empire</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=23265&format=png&color=000000" type="image/png">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      transition: background-image 0.8s ease-in-out;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    .intro {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+      background: rgba(0,0,0,0.75);
+      border-radius: 15px;
+      text-align: center;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea, select {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #222;
+      color: #fff;
+    }
+    button {
+      background: #FFD140;
+      color: #000;
+      font-weight: bold;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .back-link {
+      text-align: center;
+      display: block;
+      margin-top: 2rem;
+      color: #fff;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    const bgImages = [
+      'https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg',
+      'https://images.pexels.com/photos/19020778/pexels-photo-19020778.jpeg'
+    ];
+    let current = 0;
+    function rotateBackground() {
+      current = (current + 1) % bgImages.length;
+      document.body.style.backgroundImage = `url('${bgImages[current]}')`;
+    }
+    setInterval(rotateBackground, 6000);
+    window.onload = () => document.body.style.backgroundImage = `url('${bgImages[0]}')`;
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Work With Me</h1>
+  </header>
+  <div class="intro">
+    <p>This isn’t a job board. This is a gateway to build empires. If you’re a visionary, a builder, a doer — and you think you belong in the room — fill this form. Let’s link and level up.</p>
+  </div>
+  <div class="form-container">
+    <form action="mailto:leemessi63@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your full name" required>
+      <input type="email" name="Email" placeholder="Your email" required>
+      <input type="text" name="Instagram" placeholder="@yourhandle">
+      <select name="Role">
+        <option value="Strategist">Strategist</option>
+        <option value="Creator">Creator</option>
+        <option value="Ambassador">Ambassador</option>
+        <option value="Silent Investor">Silent Investor</option>
+        <option value="Other">Other</option>
+      </select>
+      <textarea name="Why" rows="5" placeholder="Tell me why you want to work together..." required></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+  <a class="back-link" href="index.html">← Back to Main Hub</a>
+</body>
+</html>

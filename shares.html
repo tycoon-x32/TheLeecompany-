@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Shares – Lee & Empire</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=23265&format=png&color=000000" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.pexels.com/photos/327540/pexels-photo-327540.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(0,0,0,0.85);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    input, textarea, select {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+    button {
+      background: #fff;
+      color: #000;
+      padding: 0.8rem;
+      font-weight: bold;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background: #ddd;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      color: #fff;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .price-banner {
+      text-align: center;
+      background: rgba(0,0,0,0.8);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .session-time {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+  </style>
+  <script>
+    function changeButtonText(btn) {
+      btn.innerHTML = "💼 Let's Make a Deal";
+    }
+    function updateNYTime() {
+      const now = new Date();
+      const options = { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', hour12: true };
+      const nyTime = now.toLocaleTimeString('en-US', options);
+      document.getElementById('nyTime').textContent = `Live NY Session Time: ${nyTime}`;
+    }
+    setInterval(updateNYTime, 1000);
+  </script>
+</head>
+<body onload="updateNYTime()">
+  <h1>Buy Shares in Lee & Empire</h1>
+  <div class="price-banner">
+    Current Share Price Estimate: <strong>$150,000</strong> per unit – Updated Weekly
+    <div class="session-time" id="nyTime"></div>
+  </div>
+  <p>
+    Investing in Lee & Empire means owning part of the future. We're building legacy brands in fashion, aviation, timepieces, and digital tech. This is your chance to be part of the empire — not just as a customer, but as a co-owner.
+  </p>
+  <div class="form-container">
+    <form action="mailto:leemessi63@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <select name="investment_range" required>
+        <option value="">Select Investment Range</option>
+        <option value="below_5k">Below $5,000</option>
+        <option value="5k_10k">$5,000 - $10,000</option>
+        <option value="10k_50k">$10,000 - $50,000</option>
+        <option value="50k_plus">Above $50,000</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Tell us why you're interested in investing..." required></textarea>
+      <button type="submit" onmouseover="changeButtonText(this)">💼 Submit Interest</button>
+    </form>
+  </div>
+  <a class="back-link" href="index.html">← Return to Empire Hub</a>
+</body>
+</html>
